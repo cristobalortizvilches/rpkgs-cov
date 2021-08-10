@@ -101,6 +101,7 @@ install()
 #sobre el resultado de fbind() correcto para varias entradas.
 #para ello correr comando use_testthat()
 use_testthat()
+use_test() #alternativamente?
 #Esto inicializa la maquinaria de prueba unitaria para su paquete. 
 #Se añade Suggests: testthata DESCRIPTION, crea el directorio tests/testthat/, y añade el guión tests/testthat.R.
 
@@ -134,3 +135,22 @@ fcount <- function(x) {
 #Luego podemos pre-cargar la función con load_all()
 #Finalmente, repetir el proceso con document()
 
+# Conectar paquete local con Github ---------------------------------------
+
+use_github()
+#una vez que hemos hecho el primer commit, creo que lo que hace es hacer un push que crea el repo de github
+
+# Crear un README ---------------------------------------------------------
+
+#use_readme_rmd()función inicializa un ejecutable básico README.Rmd listo para editar
+use_readme_rmd()
+#Cada vez que edito el README.Rmd debo renderizarlo para que se cree/actualice README.md
+#se puede hacew manual con knit o build_readme()
+build_readme()
+
+# Chequeo final e instalación ---------------------------------------------
+
+#aplicamos check() para cercionarnos que 0 errors √ | 0 warnings √ | 0 notes √
+check()
+#finalmente instalamos nuevamente
+install()
