@@ -1,10 +1,13 @@
 # Paquetes necesarios -----------------------------------------------------
 
+#en caso de ser necesario, instalar: install.packages(c("devtools", "roxygen2", "testthat", "knitr"))
+#para desarrollo de paquete más avanzado (C/C++) descargar el programa Rrools https://cran.r-project.org/bin/windows/Rtools/
+
 library(devtools) #desarrollo de paquetes
 packageVersion("devtools") #visualiza versión del paquete
 library(tidyverse) #manipulación de datos y mas
 library(fs) #trabajo con sistemas de archivos (filesystem work)
-
+has_devel() #chequea si mi sistema está listo para construir paquetes
 # Inicializar paquete -----------------------------------------------------
 
 #indicar ruta "C:/.../nombre_paquete"
