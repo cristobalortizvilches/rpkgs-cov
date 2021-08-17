@@ -8,11 +8,12 @@ packageVersion("devtools") #visualiza versión del paquete
 library(tidyverse) #manipulación de datos y mas
 library(fs) #trabajo con sistemas de archivos (filesystem work)
 has_devel() #chequea si mi sistema está listo para construir paquetes
+
 # Inicializar paquete -----------------------------------------------------
 
 #indicar ruta "C:/.../nombre_paquete"
 create_package("C:/Users/Cristobal/Google Drive/Universidad (FACSO)/10mo semestre (online)/[ELSOC] - Estudio Longitudinal Social de Chile/Producto 3 - Paquete ELSOC/foofactors")
-#al realizar esto se crea un nuevo Rproject específico para la creación de paquetes
+#al realizar esto se crea un nuevo RProject con estructura específica para la creación de paquetes
 
 
 # Archivos del directorio -------------------------------------------------
@@ -38,7 +39,7 @@ use_git() #con esto convertimos el directorio del paquete en un repositorio git
 
 use_r("nombre_funcion")
 #esto creará automáticamente un script en el subdirectorio R
-#en dicho script almaceno y defino la función
+#en dicho script almaceno y defino la función inmediantamente luego de ser creada
 #IMPORTANTE: el script creado debe contener solo la definición de la función creada, es decir, sólo un comando
 
 
@@ -69,20 +70,20 @@ check()
 #crear licencia con el siguiente comando:
 use_mit_license("Cristobal Ortiz")
 #se crearán dos archivos nuevos en el directorio: LICENCE y LICENCE.md
-#a su vez, actualiza la info de DESCRIPTION de manera automática
+#a su vez, actualiza la info de DESCRIPTION relativa a licencias de manera automática
 
 # Documentación -----------------------------------------------------------
 
-#abra R/fbind.R en el editor de código fuente y coloque el cursor en algún lugar de la fbind(). 
+#abra R/f(x)_creada.R en el editor de código fuente y coloque el cursor en algún lugar de la f(x). 
 #Ahora haz code > insert roxygen skeleton o Ctrl + Shift + Alt + R
 #lo anterior añade filas informativas antes de la definición de la función
 #finalmente correr document() en consola o Build > More > Document o Ctrl + Shift + D
 document()
-#al hacer esto se crea un archivo .Rd en el subdiretorio man que contiene la documentación
+#al hacer esto se crea un archivo .Rd en el subdiretorio /man que contiene la documentación
 #con esto podemos visualizar el pedir ayuda asociado a la función con ?nombre_funcion
 #NOTA: cada vez que edito roxygen skeleton hay que correr nuevamente document() 
 
-#Finalmente, se vuelve a hacer un check() para cercionarse que 0 errors √ | 0 warnings √ | 0 notes √
+#Finalmente, se vuelve a hacer un check() para cerciorarse que 0 errors √ | 0 warnings √ | 0 notes √
 
 
 # Instalar paquete --------------------------------------------------------
@@ -90,7 +91,7 @@ document()
 #habiendo hecho los chequeos correspondientes, se usa el comando install() o Build > Install and Restart
 install()
 
-#probar paquete
+#probar paquete (usaremos el ejemplo de foofactors)
 #library(nombre_paquete)
 #ejemplo sugerido
 #a <- factor("colo colo")
